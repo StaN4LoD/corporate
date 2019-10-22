@@ -15,7 +15,7 @@ class SiteController extends Controller
 
     protected $template;
 
-    protected $vars;
+    protected $vars = array();
 
     protected $contentRightBar = FALSE;
     protected $contentLeftBAr = FALSE;
@@ -24,6 +24,12 @@ class SiteController extends Controller
 
 
     public function __construct () {
+
+    }
+
+    protected function renderOutput () {
+
+        return view($this->template)->with($this->vars);
 
     }
 

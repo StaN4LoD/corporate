@@ -11,7 +11,8 @@ class IndexController extends SiteController
 
         parent::__construct();
 
-        $this->template = 'index';
+        $this->bar = 'right';
+        $this->template = env('THEME').'.index';
 
     }
 
@@ -23,6 +24,9 @@ class IndexController extends SiteController
     public function index()
     {
         //
+
+        return $this->renderOutput();
+
     }
 
     /**
