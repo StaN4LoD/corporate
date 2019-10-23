@@ -29,6 +29,9 @@ class SiteController extends Controller
 
     protected function renderOutput () {
 
+        $navigation = TRUE;
+        $this->vars = array_add($this->vars, 'navigation', $navigation);
+
         return view($this->template)->with($this->vars);
 
     }
